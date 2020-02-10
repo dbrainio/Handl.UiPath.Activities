@@ -160,6 +160,26 @@ namespace Handl.UiPath.Handl.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        public static System.Drawing.Icon handl1 {
+            get {
+                object obj = ResourceManager.GetObject("handl1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap handl2 {
+            get {
+                object obj = ResourceManager.GetObject("handl2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Classify &amp; recognize documents.
         /// </summary>
         public static string HandlDescription {
