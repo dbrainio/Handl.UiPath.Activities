@@ -96,9 +96,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="handl.ico" />
-    <Content Include="Resources\handl.ico" />
-    <Content Include="Resources\handl.png" />
+    <Resource Include="Resources\handl.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\handl.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

@@ -160,26 +160,6 @@ namespace Handl.UiPath.Handl.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        public static System.Drawing.Icon handl1 {
-            get {
-                object obj = ResourceManager.GetObject("handl1", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap handl2 {
-            get {
-                object obj = ResourceManager.GetObject("handl2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Classify &amp; recognize documents.
         /// </summary>
         public static string HandlDescription {
@@ -288,6 +268,24 @@ namespace Handl.UiPath.Handl.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Timeout to wait response from servers. Keep in mind that enabling HITL increases timeout significantly.
+        /// </summary>
+        public static string TimeoutDescription {
+            get {
+                return ResourceManager.GetString("TimeoutDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Timeout (s).
+        /// </summary>
+        public static string TimeoutName {
+            get {
+                return ResourceManager.GetString("TimeoutName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Use Handl HITL to improve quality. Recognition may require more time..
         /// </summary>
         public static string WithHitlDescription {
@@ -297,7 +295,7 @@ namespace Handl.UiPath.Handl.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enable HandlHuman-in-the-loop.
+        ///   Looks up a localized string similar to Enable Handl Human-in-the-loop.
         /// </summary>
         public static string WithHitlName {
             get {

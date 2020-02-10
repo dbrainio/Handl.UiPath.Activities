@@ -6,6 +6,8 @@ using System.IO;
 using System.Drawing;
 using System.Net.Http;
 using Newtonsoft.Json;
+using System.Net;
+using System.Threading.Tasks;
 
 namespace Handl.UiPath.Handl.Activities
 {
@@ -70,6 +72,11 @@ namespace Handl.UiPath.Handl.Activities
         [LocalizedDescription(nameof(Resources.WithHitlDescription))]
         public InArgument<bool> WithHitl { get; set; }
 
+        [LocalizedCategory(nameof(Resources.Input))]
+        [LocalizedDisplayName(nameof(Resources.TimeoutName))]
+        [LocalizedDescription(nameof(Resources.TimeoutDescription))]
+        public InArgument<int?> Timeout { get; set; }
+
         // Outputs
         [LocalizedCategory(nameof(Resources.Output))]
         [LocalizedDisplayName(nameof(Resources.ResultName))]
@@ -97,12 +104,12 @@ namespace Handl.UiPath.Handl.Activities
         [RequiredArgument]
         public InArgument<string> ApiToken { get; set; }
 
-        private HttpClient BuildClient(string apiToken)
+        private HttpClient BuildClient(string apiToken, int timeout)
         {
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.TryAddWithoutValidation("Accept", "application/json");
             client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Token " + apiToken);
-            client.Timeout = TimeSpan.FromMinutes(60);
+            client.Timeout = TimeSpan.FromSeconds(timeout);
             return client;
         }
 
@@ -130,9 +137,22 @@ namespace Handl.UiPath.Handl.Activities
                 { new StreamContent(ImageToStream(image)), "image", "doc.jpeg" }
             };
 
-            HttpResponseMessage response = client.PostAsync(url, form).Result;
-            string json = response.Content.ReadAsStringAsync().Result;
-            return (response.IsSuccessStatusCode, json);
+            bool ok = false;
+            string res = null;
+
+            try
+            {
+                HttpResponseMessage response = client.PostAsync(url, form).Result;
+                res = response.Content.ReadAsStringAsync().Result;
+                ok = response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                ok = false;
+                res = ex.ToString();
+            }
+            
+            return (ok, res);
         }
         private (bool Success, string Crop, string DocType, int Err, string Message) Classify(HttpClient client, string gateway, Image image)
         {
@@ -152,9 +172,17 @@ namespace Handl.UiPath.Handl.Activities
             }
             else
             {
-                ErrorResponse body = JsonConvert.DeserializeObject<ErrorResponse>(Body);
-                err = body.Code;
-                message = body.Message;
+                try
+                {
+                    ErrorResponse body = JsonConvert.DeserializeObject<ErrorResponse>(Body);
+                    err = body.Code;
+                    message = body.Message;
+                }
+                catch(Exception)
+                {
+                    err = 500;
+                    message = Body;
+                }
             }
             return (Success, crop, docType, err, message);
         }
@@ -174,9 +202,17 @@ namespace Handl.UiPath.Handl.Activities
             }
             else
             {
-                ErrorResponse body = JsonConvert.DeserializeObject<ErrorResponse>(Body);
-                err = body.Code;
-                message = body.Message;
+                try
+                {
+                    ErrorResponse body = JsonConvert.DeserializeObject<ErrorResponse>(Body);
+                    err = body.Code;
+                    message = body.Message;
+                }
+                catch(Exception)
+                {
+                    err = 500;
+                    message = Body;
+                }
             }
             return (Success, fields, err, message);
         }
@@ -219,13 +255,14 @@ namespace Handl.UiPath.Handl.Activities
             string allowedDocs = AllowedDocs.Get(context);
             bool hitl = WithHitl.Get(context);
             Image image = ImagePayload.Get(context);
+            int timeout = Timeout.Get(context) ?? 60;
 
             if (gateway == null || !gateway.StartsWith("http"))
             {
                 gateway = BaseCloudGateWay;
             }
 
-            HttpClient client = BuildClient(apiToken);
+            HttpClient client = BuildClient(apiToken, timeout);
             string html = null;
             int err = 0;
 
