@@ -190,6 +190,6 @@
     <value>Use Handl HITL to improve quality. Recognition may require more time.</value>
   </data>
   <data name="WithHitlName" xml:space="preserve">
-    <value>Enable Handl Human-in-the-loop</value>
+    <value>Enable HandlHuman-in-the-loop</value>
   </data>
 </root>

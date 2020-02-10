@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Handl.UiPath.Activities.Properties {
+namespace Handl.UiPath.Handl.Activities.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Handl.UiPath.Activities.Properties {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Handl.UiPath.Activities.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Handl.UiPath.Handl.Activities.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -277,7 +277,7 @@ namespace Handl.UiPath.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enable Handl Human-in-the-loop.
+        ///   Looks up a localized string similar to Enable HandlHuman-in-the-loop.
         /// </summary>
         public static string WithHitlName {
             get {

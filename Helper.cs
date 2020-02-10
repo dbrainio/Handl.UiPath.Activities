@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Handl.UiPath.Activities
+namespace Handl.UiPath.Handl.Activities
 {
     class Helper
     {
-        public const string Gateway = "https://recognize.latest.dbrain.io";
+        public const string Gateway = "https://latest.dbrain.io";
     }
 }

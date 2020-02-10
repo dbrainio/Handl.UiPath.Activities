@@ -2,7 +2,7 @@
 using System.ComponentModel;
 
 
-namespace Handl.UiPath.Activities.Design
+namespace Handl.UiPath.Handl.Activities.Design
 {
 
     public class DesignerMetadata : IRegisterMetadata
@@ -13,7 +13,7 @@ namespace Handl.UiPath.Activities.Design
         {
 
             AttributeTableBuilder attributeTableBuilder = new AttributeTableBuilder();
-            attributeTableBuilder.AddCustomAttributes(typeof(Handl.UiPath.Activities.Docr), new DesignerAttribute(typeof(HandlDesigner)));
+            attributeTableBuilder.AddCustomAttributes(typeof(Handl), new DesignerAttribute(typeof(HandlDesigner)));
             MetadataStore.AddAttributeTable(attributeTableBuilder.CreateTable());
 
         }

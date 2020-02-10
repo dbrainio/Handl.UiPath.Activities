@@ -1,8 +1,8 @@
-﻿using Handl.UiPath.Activities.Properties;
+﻿using Handl.UiPath.Handl.Activities.Properties;
 using System;
 using System.ComponentModel;
 
-namespace Handl.UiPath.Activities
+namespace Handl.UiPath.Handl.Activities
 {
     [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Module | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Parameter | AttributeTargets.Delegate | AttributeTargets.ReturnValue | AttributeTargets.GenericParameter)]
     public class LocalizedCategoryAttribute : CategoryAttribute

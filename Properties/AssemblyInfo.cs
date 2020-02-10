@@ -1,8 +1,7 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Docr")]
+[assembly: AssemblyTitle("Handl")]
 [assembly: AssemblyDescription("Handl documents classification & recognition engine")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Handl")]

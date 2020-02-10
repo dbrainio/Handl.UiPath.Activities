@@ -10,8 +10,8 @@
     <ProjectGuid>{8C8782CF-7DD5-4681-9F15-85F3426ACAED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Handl.UiPath.Activities</RootNamespace>
-    <AssemblyName>Handl.UiPath.Activities</AssemblyName>
+    <RootNamespace>Handl.UiPath.Handl.Activities</RootNamespace>
+    <AssemblyName>Handl.UiPath.Handl.Activities</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -44,11 +44,11 @@
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Activities\Docr.cs" />
+    <Compile Include="Activities\Handl.cs" />
     <Compile Include="Activities\DesignerMetadata.cs" />
     <Compile Include="Helper.cs" />
-    <Compile Include="Designer\Designer.xaml.cs">
-      <DependentUpon>Designer.xaml</DependentUpon>
+    <Compile Include="Designer\HandlDesigner.xaml.cs">
+      <DependentUpon>HandlDesigner.xaml</DependentUpon>
     </Compile>
     <Compile Include="Localization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,7 +67,7 @@
     <EmbeddedResource Include="Properties\Resources.ru.resx" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Designer\Designer.xaml">
+    <Page Include="Designer\HandlDesigner.xaml">
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="handl.ico" />
+    <Content Include="Resources\handl.ico" />
     <Content Include="Resources\handl.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

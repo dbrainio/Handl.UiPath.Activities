@@ -1,4 +1,4 @@
-﻿using Handl.UiPath.Activities.Properties;
+﻿using Handl.UiPath.Handl.Activities.Properties;
 using System;
 using System.Activities;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Net.Http;
 using Newtonsoft.Json;
 
-namespace Handl.UiPath.Activities
+namespace Handl.UiPath.Handl.Activities
 {
     public struct ClassifyDocInfo
     {
@@ -49,7 +49,7 @@ namespace Handl.UiPath.Activities
     [LocalizedCategory(nameof(Resources.Handl))]
     [LocalizedDisplayName(nameof(Resources.HandlName))]
     [LocalizedDescription(nameof(Resources.HandlDescription))]
-    public class Docr : CodeActivity
+    public class Handl : CodeActivity
     {
         protected static string BaseCloudGateWay = "https://latest.dbrain.io";
 
