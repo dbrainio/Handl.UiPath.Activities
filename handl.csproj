@@ -92,7 +92,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="docr.nuspec" />
+    <None Include="handl.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
