@@ -1,4 +1,4 @@
-﻿namespace Handl.UiPath.Handl.Activities
+﻿namespace Handl.Handl.Activities
 {
     // Interaction logic for HandlDesigner.xaml
     public partial class HandlDesigner

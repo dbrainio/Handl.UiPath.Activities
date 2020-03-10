@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Handl")]
 [assembly: AssemblyProduct("Handl")]
-[assembly: AssemblyCopyright("Copyright © Handl 2019")]
+[assembly: AssemblyCopyright("Copyright © Handl 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

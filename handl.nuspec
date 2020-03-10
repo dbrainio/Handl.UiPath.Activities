@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>Handl.UiPath.Handl.Activities</id>
+    <id>Handl.Handl.Activities</id>
     <title>Handl</title>
     <version>1.3.6</version>
     <authors>Handl</authors>
     <owners>Handl</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <licenseUrl>https://github.com/dbrainio/Handl.UiPath.Activities</licenseUrl>
-    <projectUrl>https://github.com/dbrainio/Handl.UiPath.Activities</projectUrl>
-    <iconUrl>https://github.com/dbrainio/Handl.UiPath.Activities/raw/master/Resources/handl.png</iconUrl>
+    <licenseUrl>https://github.com/dbrainio/Handl.Handl.Activities</licenseUrl>
+    <projectUrl>https://github.com/dbrainio/Handl.Handl.Activities</projectUrl>
+    <iconUrl>https://github.com/dbrainio/Handl.Handl.Activities/raw/master/Resources/handl.png</iconUrl>
     <description>Handl documents classification &amp; recognition engine</description>
     <copyright>Copyright © Handl 2019</copyright>
     <tags>Handl,UiPath,Activity,OCR</tags>
@@ -20,7 +20,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\Handl.UiPath.Handl.Activities.dll" target="lib\net461\Handl.UiPath.Handl.Activities.dll" />
+    <file src="bin\Release\Handl.Handl.Activities.dll" target="lib\net461\Handl.Handl.Activities.dll" />
     <file src="bin\Release\ru\**" target="lib\net461\ru\" />
   </files>
 </package>

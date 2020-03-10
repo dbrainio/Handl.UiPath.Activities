@@ -2,7 +2,7 @@
 using System.ComponentModel;
 
 
-namespace Handl.UiPath.Handl.Activities.Design
+namespace Handl.Handl.Activities.Design
 {
 
     public class DesignerMetadata : IRegisterMetadata

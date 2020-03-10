@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Handl.UiPath.Handl.Activities
+namespace Handl.Handl.Activities
 {
     class Helper
     {

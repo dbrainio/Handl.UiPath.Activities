@@ -1,4 +1,4 @@
-﻿using Handl.UiPath.Handl.Activities.Properties;
+﻿using Handl.Handl.Activities.Properties;
 using System;
 using System.Activities;
 using System.Collections.Generic;
@@ -6,10 +6,8 @@ using System.IO;
 using System.Drawing;
 using System.Net.Http;
 using Newtonsoft.Json;
-using System.Net;
-using System.Threading.Tasks;
 
-namespace Handl.UiPath.Handl.Activities
+namespace Handl.Handl.Activities
 {
     public struct ClassifyDocInfo
     {
